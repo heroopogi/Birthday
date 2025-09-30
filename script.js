@@ -48,4 +48,27 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
+
+    // Music player functionality
+    const musicToggle = document.getElementById('music-toggle');
+    const birthdayMusic = document.getElementById('birthday-music');
+    let isPlaying = false;
+
+    musicToggle.addEventListener('click', function() {
+        if (isPlaying) {
+            birthdayMusic.pause();
+            musicToggle.textContent = 'Play Music';
+            isPlaying = false;
+        } else {
+            birthdayMusic.play();
+            musicToggle.textContent = 'Pause Music';
+            isPlaying = true;
+        }
+    });
+
+    // Update button text when music ends
+    birthdayMusic.addEventListener('ended', function() {
+        musicToggle.textContent = 'Play Music';
+        isPlaying = false;
+    });
 });
