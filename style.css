@@ -144,3 +144,36 @@ header {
         font-size: 30px;
     }
 }
+
+/* Music player styles */
+.music-player {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#music-toggle {
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#music-toggle:hover {
+    background-color: #ff9bb3;
+}
+
+#birthday-music {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #music-toggle {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
